@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bgColor">#e2f4fb</color>
+    <color name="btnColor">#1C6D87</color>
+    <color name="headingColor">#0099CC</color>
+    <color name="linkColor">#235D79</color>
+    <color name="headerBgColor">#8ad5f0</color>
+    <color name="footerColor">#ff7979</color>
+    <color name="widgetHeaderBgColor">#858ad5f0</color>
+    
+    <style name="MediAppTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/bgColor</item>
+        <item name="android:colorBackground">@color/bgColor</item>
+    </style>
+    
+    <style name="topHeader" parent="android:Widget.TextView">
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+    
+</resources>

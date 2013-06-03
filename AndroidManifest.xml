@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maomuffy.medicnaija"
+    android:installLocation="auto"
+    android:versionCode="7"
+    android:versionName="1.0.6" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <permission
+        android:name="com.maomuffy.medicnaija.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.maomuffy.medicnaija.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- Google MAP RELATED Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD7NKddPtsQtmIVhrhcefCmiVJ72IseoXs" />
+
+        <activity
+            android:name="com.maomuffy.medicnaija.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.ProfileEditActivity"
+            android:label="@string/title_activity_profile_edit"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.ProminentDiseaseActivity"
+            android:label="@string/title_activity_prominent_disease"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.HealthTipsActivity"
+            android:label="@string/title_activity_health_tips"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.BpCheckerActivity"
+            android:label="@string/title_activity_bp_checker"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.ProminentDiseaseDetailActivity"
+            android:label="@string/title_activity_prominent_disease_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.HealthTipsCategoryActivity"
+            android:label="@string/title_activity_health_tip_category"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.HealthTipsDetailActivity"
+            android:label="@string/title_activity_health_tip_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.SpecialistMapActivity"
+            android:label="@string/title_activity_specialist_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.maomuffy.medicnaija.BpCheckerDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <receiver android:name="MedicNaijaWidgetProvider">
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/medicnaija_widget_provider"/>
+        </receiver>
+        <service android:name=".MedicNaijaUpdateWidgetService"></service>
+    </application>
+
+</manifest>
